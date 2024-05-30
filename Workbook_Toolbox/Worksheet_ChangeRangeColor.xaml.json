@@ -1,0 +1,57 @@
+{
+  "DisplayName": "Worksheet_ChangeRangeColor",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "WorkbookPath",
+      "DisplayName": "WorkbookPath",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "WorksheetName",
+      "DisplayName": "WorksheetName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Test1",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "RangeToColor",
+      "DisplayName": "RangeToColor",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "A1:B7",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "ColorName",
+      "DisplayName": "ColorName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Yellow",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

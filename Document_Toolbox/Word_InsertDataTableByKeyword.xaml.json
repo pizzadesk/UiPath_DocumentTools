@@ -1,0 +1,45 @@
+{
+  "DisplayName": "Word_InsertDataTableByKeyword",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "wordFilePath",
+      "DisplayName": "wordFilePath",
+      "Category": null,
+      "Tooltip": "Path to Word document in which to insert the table",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "DataTable",
+      "DisplayName": "DataTable",
+      "Category": null,
+      "Tooltip": "The data table to insert into Word document",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Placeholder",
+      "DisplayName": "Placeholder",
+      "Category": null,
+      "Tooltip": "Target placeholder/keyword, which will be replaced by the data table at the exact position. Make sure it is unique and precise, to avoid accidental overwrite of an identical placeholder",
+      "Placeholder": "[TableHere]",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

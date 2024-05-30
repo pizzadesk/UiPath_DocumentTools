@@ -1,0 +1,118 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RemoveWorksheetHyperlinks" this:RemoveWorksheetHyperlinks.Placeholder="%[TableHere]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Path to Word document in which to insert the table" Name="wordFilePath" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="The data table to insert into Word document" Name="DataTable" Type="InArgument(sd:DataTable)" />
+    <x:Property sap2010:Annotation.AnnotationText="Target placeholder/keyword, which will be replaced by the data table at the exact position. Make sure it is unique and precise, to avoid accidental overwrite of an identical placeholder" Name="Placeholder" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2044,916</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RemoveWorksheetHyperlinks_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>DocumentFormat.OpenXml.Packaging</x:String>
+      <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>DocumentFormat.OpenXml.Wordprocessing</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable3</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Activities.Core.Presentation</AssemblyReference>
+      <AssemblyReference>System.Activities.Presentation</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml.Framework</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Inserts a specified data table into a word document in keyword location&#xA;" DisplayName="Insert Data Table into word document" sap:VirtualizedContainerService.HintSize="512,744" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;InsertDataTable: START&quot;]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Try&#xA;    ' Open the document&#xA;    Using wordDoc As WordprocessingDocument = WordprocessingDocument.Open(filePath, True)&#xA;        Dim docPart As MainDocumentPart = wordDoc.MainDocumentPart&#xA;        Dim docBody As Body = docPart.Document.Body&#xA;        Dim keywordRun As Run = Nothing&#xA;&#xA;        ' Find the run containing the placeholder text&#xA;        For Each text As Text In docBody.Descendants(Of Text)()&#xA;            If text.Text.Contains(keyword) Then&#xA;                keywordRun = CType(text.Parent, Run)&#xA;                Exit For&#xA;            End If&#xA;        Next&#xA;&#xA;        ' If the run with the keyword is found&#xA;        If keywordRun IsNot Nothing Then&#xA;            Dim parentParagraph As Paragraph = CType(keywordRun.Parent, Paragraph)&#xA;&#xA;            ' Create a new table with borders&#xA;            Dim table As New Table(New TableProperties(New TableBorders(&#xA;                New TopBorder() With {.Val = BorderValues.Single, .Size = 6},&#xA;                New BottomBorder() With {.Val = BorderValues.Single, .Size = 6},&#xA;                New LeftBorder() With {.Val = BorderValues.Single, .Size = 6},&#xA;                New RightBorder() With {.Val = BorderValues.Single, .Size = 6},&#xA;                New InsideHorizontalBorder() With {.Val = BorderValues.Single, .Size = 6},&#xA;                New InsideVerticalBorder() With {.Val = BorderValues.Single, .Size = 6}&#xA;            )))&#xA;&#xA;            ' Add column headers&#xA;            Dim headerRow As New TableRow()&#xA;            For Each column As DataColumn In dataTable.Columns&#xA;                headerRow.Append(New TableCell(New Paragraph(New Run(New Text(column.ColumnName)))))&#xA;            Next&#xA;            table.Append(headerRow)&#xA;&#xA;            ' Add rows&#xA;            For Each row As DataRow In dataTable.Rows&#xA;                Dim tableRow As New TableRow()&#xA;                For Each column As DataColumn In dataTable.Columns&#xA;                    tableRow.Append(New TableCell(New Paragraph(New Run(New Text(row(column).ToString())))))&#xA;                Next&#xA;                table.Append(tableRow)&#xA;            Next&#xA;&#xA;            ' Insert the table at the location of the keyword&#xA;            parentParagraph.InsertAfterSelf(table)&#xA;            keywordRun.Remove()&#xA;&#xA;            ' Save changes&#xA;            docPart.Document.Save()&#xA;        End If&#xA;    End Using&#xA;Catch ex As Exception&#xA;    ' Handle exceptions as needed&#xA;    Throw New Exception(&quot;Error replacing placeholder with DataTable in Word document: &quot; &amp; ex.Message)&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="filePath">[wordFilePath]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="dataTable">[dataTable]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="keyword">[Placeholder]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;InsertDataTable: END&quot;]" />
+  </Sequence>
+</Activity>
