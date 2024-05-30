@@ -18,8 +18,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "List",
-      "DisplayName": "List",
+      "Name": "DictionaryOfFoundFormats",
+      "DisplayName": "DictionaryOfFoundFormats",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,

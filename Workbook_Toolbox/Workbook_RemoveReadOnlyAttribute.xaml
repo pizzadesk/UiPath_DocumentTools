@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1627,917</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2044,916</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Workbook_RemoveReadOnlyAttribute_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -76,7 +76,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Add path to your file/workbook that you need to make non-read-only in FilePath in-argument&#xA;2. The snippet will apply attribute to the specified path" DisplayName="Workbook_RemoveReadOnlyAttribute" sap:VirtualizedContainerService.HintSize="512,759" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="The code checks if a file exists at the specified path. If the file exists, it sets its read-only attribute to false, allowing modifications. If the file does not exist, it prints a message indicating so." DisplayName="Workbook_RemoveReadOnlyAttribute" sap:VirtualizedContainerService.HintSize="512,759" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -84,7 +84,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Workbook_RemoveReadOnlyAttribute: START&quot;]" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim fileInfo As New System.IO.FileInfo(filePath)&#xA;&#xA;    If (fileInfo.Exists) Then&#xA;        fileInfo.IsReadOnly = False&#xA;    Else&#xA;        Console.WriteLine(&quot;File does not exist.&quot;)&#xA;    End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim fileInfo As New System.IO.FileInfo(filePath)&#xD;&#xA;&#xD;&#xA;If fileInfo.Exists Then&#xD;&#xA;    fileInfo.IsReadOnly = False&#xD;&#xA;Else&#xD;&#xA;    Console.WriteLine(&quot;File does not exist.&quot;)&#xD;&#xA;End If" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="filePath">[FilePath]</InArgument>
       </ui:InvokeCode.Arguments>
