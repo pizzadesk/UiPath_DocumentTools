@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2044,1085</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1189,1171</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,7 +79,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Counts differences between two strings of the same length. Used in error detection." DisplayName="Hamming_Distance" sap:VirtualizedContainerService.HintSize="512,1020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Counts differences between two strings of the same length. Used in error detection.&#xD;&#xA;&#xD;&#xA;Interpretation:&#xD;&#xA;Hamming distance indicates the number of positions at which the corresponding symbols are different.&#xD;&#xA;A distance of 0 means the strings are identical.&#xD;&#xA;A higher distance indicates more differences between the strings." DisplayName="Hamming_Distance" sap:VirtualizedContainerService.HintSize="512,1106" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="DissimilarSymbolStringFromList" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="DissimilarSymbolList" />
@@ -91,7 +91,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Hamming Distance: START&quot;]" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Input strings (these should be defined as arguments in UiPath)&#xA;Dim s As String = s1&#xA;Dim t As String = s2&#xA;&#xA;' Initialize the lengths of the strings&#xA;Dim n As Integer = s.Length&#xA;Dim m As Integer = t.Length&#xA;&#xA;' Check if the strings have equal length&#xA;If n &lt;&gt; m Then&#xA;    Console.WriteLine(&quot;Strings must be of equal length for Hamming Distance.&quot;)&#xA;    Return&#xA;End If&#xA;&#xA;' Initialize the Hamming distance variable and the list to store dissimilar symbols and their positions&#xA;Dim hammingDistance As Integer = 0&#xA;Dim dissimilarSymbols As New List(Of String)&#xA;&#xA;' Compute the Hamming distance and identify dissimilar symbols&#xA;For i As Integer = 0 To n - 1&#xA;    If s(i) &lt;&gt; t(i) Then&#xA;        hammingDistance += 1&#xA;        dissimilarSymbols.Add($&quot;Symbol: {s(i)}, Position: {i + 1}&quot;)&#xA;    End If&#xA;Next&#xA;&#xA;' Output the Hamming distance&#xA;Console.WriteLine($&quot;Hamming Distance computed: {hammingDistance}&quot;)&#xA;&#xA;' Output dissimilar symbols and their positions&#xA;If dissimilarSymbols.Count &gt; 0 Then&#xA;    Console.WriteLine(&quot;Dissimilar Symbols and Positions:&quot;)&#xA;    For Each dissimilarSymbol In dissimilarSymbols&#xA;        Console.WriteLine(dissimilarSymbol)&#xA;    Next&#xA;Else&#xA;    Console.WriteLine(&quot;No dissimilar symbols found.&quot;)&#xA;End If&#xA;&#xA;' Assign the results to the output arguments (defined in UiPath)&#xA;HDistance = hammingDistance&#xA;DissSymbols = dissimilarSymbols" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Input strings (these should be defined as arguments in UiPath)&#xD;&#xA;Dim s As String = s1&#xD;&#xA;Dim t As String = s2&#xD;&#xA;&#xD;&#xA;' Initialize the lengths of the strings&#xD;&#xA;Dim sLength As Integer = s.Length&#xD;&#xA;Dim tLength As Integer = t.Length&#xD;&#xA;&#xD;&#xA;' Check if the strings have equal length&#xD;&#xA;If sLength &lt;&gt; tLength Then&#xD;&#xA;    Console.WriteLine(&quot;Strings must be of equal length for Hamming Distance.&quot;)&#xD;&#xA;    Return&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Initialize the Hamming distance variable and the list to store dissimilar symbols and their positions&#xD;&#xA;Dim hammingDistance As Integer = 0&#xD;&#xA;Dim dissimilarSymbols As New List(Of String)&#xD;&#xA;&#xD;&#xA;' Compute the Hamming distance and identify dissimilar symbols&#xD;&#xA;For i As Integer = 0 To sLength - 1&#xD;&#xA;    If s(i) &lt;&gt; t(i) Then&#xD;&#xA;        hammingDistance += 1&#xD;&#xA;        dissimilarSymbols.Add($&quot;Symbol: {s(i)}, Position: {i + 1}&quot;)&#xD;&#xA;    End If&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;' Output the Hamming distance&#xD;&#xA;Console.WriteLine($&quot;Hamming Distance computed: {hammingDistance}&quot;)&#xD;&#xA;&#xD;&#xA;'Output dissimilar symbols and their positions&#xD;&#xA;If dissimilarSymbols.Count &gt; 0 Then&#xD;&#xA;    Console.WriteLine(&quot;Dissimilar Symbols and Positions:&quot;)&#xD;&#xA;    For Each dissimilarSymbol In dissimilarSymbols&#xD;&#xA;        Console.WriteLine(dissimilarSymbol)&#xD;&#xA;    Next&#xD;&#xA;Else&#xD;&#xA;    Console.WriteLine(&quot;No dissimilar symbols found.&quot;)&#xD;&#xA;End If&#xD;&#xA;&#xD;&#xA;' Assign the results to the output arguments (defined in UiPath)&#xD;&#xA;HDistance = hammingDistance&#xD;&#xA;DissSymbols = dissimilarSymbols" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,277" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="s1">[String1]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="s2">[String2]</InArgument>
@@ -107,7 +107,7 @@
         <InArgument x:TypeArguments="x:String">[String.Join(", ", DissimilarSymbolList.Select(Function(symbol) symbol.Substring(symbol.IndexOf("Symbol: ") + "Symbol: ".Length)))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Hamming Distance between &quot;+String1+&quot; and &quot;+String2+&quot; is &quot;+HDistance.ToString+&quot;. Dissimilar symbols: &quot;+DissimilarSymbolStringFromList]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;Hamming Distance between &quot;+String1+&quot; and &quot;+String2+&quot; is &quot;+HDistance.ToString]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Hamming Distance: END&quot;]" />
   </Sequence>
 </Activity>
