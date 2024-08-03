@@ -16,7 +16,6 @@ Welcome to the Cross-Platform UiPath Activities repository! This collection of U
 
 - **Document (Word) Operations:** Perform various operations on Word documents, such as editing, formatting, and extracting content, using OpenXML.
 
-- **String Distance Calculations**: Leverage a library of workflows utilizing Invoke Code activities to perform four string distance calculations: Levenshtein Distance, Hamming Distance, Longest Common Subsequence (LCS), and Jaro Distance. Each workflow accepts two input strings and outputs the calculated distance or similarity score, ideal for data validation, error correction, and duplicate detection.
 
 ## Getting Started
 
