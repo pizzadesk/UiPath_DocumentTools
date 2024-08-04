@@ -27,4 +27,4 @@ Welcome to the Cross-Platform UiPath Activities repository! This collection of U
 
 1. Clone this repository to your local machine.
 
-   https://github.com/pizzadesk/UiPath-DocumentTools.git
+   https://github.com/pizzadesk/UiPath_DocumentTools.git
